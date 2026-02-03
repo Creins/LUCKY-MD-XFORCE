@@ -1,14 +1,14 @@
 
 
-# 🌟 LUCKY XFORCE 🚀
+# 🌟 CREINS XFORCE 🚀
 
-[![FREDIEZRA TECH](https://raw.githubusercontent.com/mr-X-force/LUCKY-MD-XFORCE/main/media/lucky.svg)](https://whatsapp.com/channel/0029VaihcQv84Om8LP59fO3f)
+[![Creinsibraal TECH](https://raw.githubusercontent.com/mr-X-force/CREINS-MD-XFORCE/main/media/lucky.svg)](https://whatsapp.com/channel/0029VaihcQv84Om8LP59fO3f)
 
 ---
 
 ## 📊 Profile Overview
 
-👤 **Developer**: [FREDI AI](https://github.com/mr-X-force)  
+👤 **Developer**: [CREINS AI](https://github.com/mr-X-force)  
 📊 **Profile Views**:  
 ![Profile Views](https://komarev.com/ghpvc/?username=mr-X-force&label=VIEWS&style=flat-square&color=blue)
 
@@ -36,7 +36,7 @@
 
 ## 📥 Download ZIP
 
-📁 **Download ZIP File**: [LUCKY XFORCE ZIP 📁](https://github.com/mr-X-force/LUCKY-MD-XFORCE/archive/refs/heads/main.zip)
+📁 **Download ZIP File**: [CREINS XFORCE ZIP 📁](https://github.com/mr-X-force/CREINS-MD-XFORCE/archive/refs/heads/main.zip)
 
 ---
 
