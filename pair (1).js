@@ -60,7 +60,7 @@ router.get('/', async (req, res) => {
 *═════════════════════*
 
 🎉 *CONGRATULATIONS!* 🎉  
-🔥 *LUCKY XFORCE MULTI DEVICE* 🗡️  
+🔥 *CREINS XFORCE MULTI DEVICE* 🗡️  
 *Successfully Connected* to your WhatsApp 📱✨  
 Welcome to a world of automation, power & freedom! 🚀💬
 
@@ -95,7 +95,7 @@ Smart Tools | Instant Help | Cool Features
 > https://github.com/mr-X-force/LUCKY-MD-XFORC
 
 🗝️ Old Version:  
-> https://github.com/Fred1e/LUCKY_MD  
+> https://github.com/Fred1e/CREINS_MD  
 ✨ Don't forget to ⭐ Star & 🍴 Fork!
 
 ✅ Hosted Securely on *Heroku*
@@ -103,7 +103,7 @@ Smart Tools | Instant Help | Cool Features
 *═════════════════════*
 
 💬 *Need Help? Message Me Anytime:*  
-> 📞 https://wa.me/255752593977
+> 📞 https://wa.me/254787243487
 
 👨‍💻 *This Project Was Built by*  
 *FREDIETECH / FREDI AI™*
