@@ -62,7 +62,7 @@ router.get('/', async (req, res) => {
 *═════════════════════*
 
 🎉 *CONGRATULATIONS!* 🎉  
-🔥 *LUCKY XFORCE MULTI DEVICE* 🗡️  
+🔥 *CREINS XFORCE MULTI DEVICE* 🗡️  
 *Successfully Connected* to your WhatsApp 📱✨  
 Welcome to a world of automation, power & freedom! 🚀💬
 
