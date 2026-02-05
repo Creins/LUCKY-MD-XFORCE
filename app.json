@@ -8,7 +8,7 @@
     "whatsapp"
   ],
   "logo": "https://files.catbox.moe/1q3yrw.jpg",
-  "repository": "https://github.com/mr-X-force/LUCKY-MD-XFORCE",
+  "repository": "https://github.com/mr-X-force/CREINS-MD-XFORCE",
   "succes_url": "/",
   "stack": "container",
   "env": {
@@ -65,7 +65,7 @@
     },
     "CHAT_BOT": {
       "description": "urs if you want bot to chat automatic in inbox",
-      "value": "no",
+      "value": "The owner is busy",
       "required": false
     },
     "PUBLIC_MODE": {
@@ -86,7 +86,7 @@
     },
     "OWNER_NAME": {
       "description": "don't you have a name bro.Insert your name here!!",
-      "value": "Fredi_Ezra",
+      "value": "creinsibraal",
       "required": false
     },
     "AUTO_READ_MESSAGES": {
@@ -95,8 +95,8 @@
       "required": false  
     },
     "NUMERO_OWNER": {
-      "description": "Your phone number (exclude '+' and area code, e.g., '255752593977')",
-      "value": "255752593977",
+      "description": "Your phone number (exclude '+' and area code, e.g., '254787243487')",
+      "value": "254787243487",
       "required": false
     },
     "STARTING_BOT_MESSAGE": {
@@ -151,3 +151,4 @@
   ]
 	
 }
+
