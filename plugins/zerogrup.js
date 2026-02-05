@@ -426,70 +426,76 @@ ezra({ nomCom: "info", categorie: 'Fredi-Group' }, async (dest, zk, commandeOpti
 
 
 
- // COMMAND TO ACTVATE ANTILINK GROUP
- ezra({ nomCom: "antilink", categorie: 'Fredi-Group', reaction: "🔗" }, async (dest, zk, commandeOptions) => {
+// COMMAND TO ACTVATE ANTILINK GROUP
+ezra({ 
+    nomCom: "antilink", 
+    categorie: 'Fredi-Group', 
+    reaction: "🔗" 
+}, async (dest, zk, commandeOptions) => {
 
+    var { repondre, arg, verifGroupe, superUser, verifAdmin } = commandeOptions;
 
-  var { repondre, arg, verifGroupe, superUser, verifAdmin } = commandeOptions;
-  
-
-  
-  if (!verifGroupe) {
-    return repondre("*for groups only*");
-  }
-  
-  if( superUser || verifAdmin) {
-    const enetatoui = await verifierEtatJid(dest)
-    try {
-      if (!arg || !arg[0] || arg === ' ') { repondre("antilink on to activate the anti-link feature\nantilink off to deactivate the anti-link feature\nantilink action/remove to directly remove the link without notice\nantilink action/warn to give warnings\nantilink action/delete to remove the link without any sanctions\n\nPlease note that by default, the anti-link feature is set to delete.") ; return};
-     
-      if(arg[0] === 'on') {
-
-      
-       if(enetatoui ) { repondre("the antilink is already activated for this group")
-                    } else {
-                  await ajouterOuMettreAJourJid(dest,"oui");
-                
-              repondre("the antilink is activated successfully") }
-     
-            } else if (arg[0] === "off") {
-
-              if (enetatoui) { 
-                await ajouterOuMettreAJourJid(dest , "non");
-
-                repondre("The antilink has been successfully deactivated");
-                
-              } else {
-                repondre("antilink is not activated for this group");
-              }
-            } else if (arg.join('').split("/")[0] === 'action') {
-                            
-
-              let action = (arg.join('').split("/")[1]).toLowerCase() ;
-
-              if ( action == 'remove' || action == 'warn' || action == 'delete' ) {
-
-                await mettreAJourAction(dest,action);
-
-                repondre(`The anti-link action has been updated to ${arg.join('').split("/")[1]}`);
-
-              } else {
-                  repondre("The only actions available are warn, remove, and delete") ;
-              }
-            
-
-            } else repondre("antilink on to activate the anti-link feature\nantilink off to deactivate the anti-link feature\nantilink action/remove to directly remove the link without notice\nantilink action/warn to give warnings\nantilink action/delete to remove the link without any sanctions\n\nPlease note that by default, the anti-link feature is set to delete.")
-
-      
-    } catch (error) {
-       repondre(error)
+    if (!verifGroupe) {
+        return repondre("*for groups only*");
     }
 
-  } else { repondre('You are not entitled to this order') ;
-  }
+    if (superUser || verifAdmin) {
+        const enetatoui = await verifierEtatJid(dest);
+        
+        try {
+            if (!arg || !arg[0] || arg === ' ') { 
+                repondre("antilink on to activate the anti-link feature\nantilink off to deactivate the anti-link feature\nantilink action/remove to directly remove the link without notice\nantilink action/warn to give warnings\nantilink action/delete to remove the link without any sanctions\n\nPlease note that by default, the anti-link feature is set to delete."); 
+                return;
+            }
 
+            if (arg[0] === 'on') {
+                if (enetatoui) { 
+                    repondre("the antilink is already activated for this group");
+                } else {
+                    await ajouterOuMettreAJourJid(dest, "oui");
+                    repondre("the antilink is activated successfully");
+                }
+                
+            } else if (arg[0] === "off") {
+                if (enetatoui) { 
+                    await ajouterOuMettreAJourJid(dest, "non");
+                    repondre("The antilink has been successfully deactivated");
+                } else {
+                    repondre("antilink is not activated for this group");
+                }
+                
+            } else if (arg.join(' ').split("/")[0] === 'action') {
+                // Fix: Changed arg.join('') to arg.join(' ') to preserve spaces
+                let fullCommand = arg.join(' ');
+                let parts = fullCommand.split("/");
+                
+                if (parts.length < 2) {
+                    repondre("Please specify an action: action/remove, action/warn, or action/delete");
+                    return;
+                }
+                
+                let action = parts[1].toLowerCase().trim();
+
+                if (action === 'remove' || action === 'warn' || action === 'delete') {
+                    await mettreAJourAction(dest, action);
+                    repondre(`The anti-link action has been updated to ${action}`);
+                } else {
+                    repondre("The only actions available are warn, remove, and delete");
+                }
+                
+            } else {
+                repondre("antilink on to activate the anti-link feature\nantilink off to deactivate the anti-link feature\nantilink action/remove to directly remove the link without notice\nantilink action/warn to give warnings\nantilink action/delete to remove the link without any sanctions\n\nPlease note that by default, the anti-link feature is set to delete.");
+            }
+
+        } catch (error) {
+            console.error("Anti-link command error:", error);
+            repondre("Error: " + error.message);
+        }
+
+    } else { 
+        repondre('You are not entitled to this order');
+    }
 });
-
 
 
 

@@ -86,7 +86,7 @@
     },
     "OWNER_NAME": {
       "description": "don't you have a name bro.Insert your name here!!",
-      "value": "FrediEzra",
+      "value": "Fredi_Ezra",
       "required": false
     },
     "AUTO_READ_MESSAGES": {
@@ -124,8 +124,13 @@
       "value": "no",
       "required": false
     },
-    "AUTO_REACTION": {
-      "description": "Set 'yes' to enable bot reactions to messages in private chats",
+    "AUTO_REACT_PM": {
+      "description": "Set 'yes' to enable bot reactions to messages in private away chats",
+      "value": "no",
+      "required": false
+    },
+    "AUTO_REACT_GC": {
+      "description": "Set 'yes' to enable bot reactions to messages in group away chats",
       "value": "no",
       "required": false
     }
