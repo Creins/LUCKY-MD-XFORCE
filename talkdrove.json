@@ -2,9 +2,9 @@
   "bot-name": "CREINS-MD-XFORCE MULT DEVICE",
   "description": "Creins Whatsapp device bot made by ibraal to help Whatsapp users to enjoy while helping...",
   "logo": "https://files.catbox.moe/uw4l17.jpeg",
-  "keywords": ["fredi-Ezra", "creins-Md", "mdtech"],
+  "keywords": ["creins ibraal", "creins-Md", "mdtech"],
   "documentation-link": "https://lucky-xforce-session-site.onrender.com",
-  "owner-verification":"frediezra001@gmail.com",
+  "owner-verification":"johnnkaranjaah@gmail.com",
   "env": {
     "PREFIX":
     {
@@ -111,7 +111,7 @@
     },
     "NUMERO_OWNER": {
       "description": "Your phone number (exclude '+' and area code, e.g., '255752593977')",
-      "value": "255752593977",
+      "value": "254787243487",
       "required": false
     },
     "WARN_COUNT": {
